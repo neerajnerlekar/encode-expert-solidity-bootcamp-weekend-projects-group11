@@ -11,7 +11,7 @@ Solidity
     and you need to delete the items at indexes 8,
     2 and 7.
     The final array will then have items
-    {0,1,3,4,5,6,9,10,11
+    {0,1,3,4,5,6,9,10,11}
 
     ***
 
