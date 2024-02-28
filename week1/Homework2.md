@@ -21,7 +21,7 @@ Solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract ArrayItems() {
+contract ArrayItems{
     uint[] public array;
 
     function removeRandomArrayItems(uint index) public {
@@ -31,23 +31,27 @@ contract ArrayItems() {
         array.pop();
         }
 
-    function testRemoveArrayItems() external {
+    function testRemoveArrayItems() public {
         array = [0,1,2,3,4,5,6,7,8,9,10,11];
 
         // remove item at index 8
         removeRandomArrayItems(8);
         assert(array.length == 11);
-        assert(array[8] == 9)
+        assert(array[8] == 11);
 
         // remove item at index 2
         removeRandomArrayItems(2);
         assert(array.length == 10);
-        assert(array[2] == 3)
+        assert(array[2] == 10);
 
         // remove item at index 7
         removeRandomArrayItems(7);
         assert(array.length == 9);
-        assert(array[7] == 10);
+        assert(array[7] == 9);
         }
+
+    function getArrayItem(uint256 index) public view returns (uint256) {
+        return array[index];
     }
+}
 ```
